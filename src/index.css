@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --dark-red: #6C090C;
+  --light-red: #FF444D;
+  --red: #B81E26;
+  --dark-green: #255501;
+  --light-green: #20B746;
+  --front-color: rgba(255, 255, 255, 0.87);
+  --back-color: #000;
+
+  color-scheme: light dark;
+  color: var(--front-color);
+  background-color: var(--back-color);
+  --dark-red: #6C090C;
+  --light-red: #FF444D;
+  --red: #B81E26;
+  --dark-green: #255501;
+  --light-green: #20B746;
+
+  --nav-bg: linear-gradient(180deg, var(--dark-green) 0%, var(--dark-red) 0.01%, rgba(255, 68, 77, 0) 99.99%);
+  --component-gradient-bg: linear-gradient(90deg, var(--red) 0%, var(--light-red) 100%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 17px;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.parisienne {
+  font-family: "Parisienne", cursive;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--back-color);
+    background-color: var(--front-color);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
