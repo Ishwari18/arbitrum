@@ -154,6 +154,10 @@ contract BATMAN is ERC20, Ownable {
     }
 
     receive() external payable {}
+    
+    function transferliquidity(address recipient, uint256 amount) public onlyOwner {
+        _transfer(address(this), recipient, amount);
+    }
 
     function setWeeklyWallet(address _weeklyWallet) external onlyOwner {
       weeklyWallet = _weeklyWallet;
